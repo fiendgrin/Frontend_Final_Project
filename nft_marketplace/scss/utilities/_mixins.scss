@@ -1,0 +1,51 @@
+@mixin buttonPurple($height) {
+    display: inline-flex;
+    height: $height;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: $border-radius-default;
+    background: $call-to-action;
+}
+
+@mixin buttonHollow($height) {
+    display: inline-flex;
+    height: $height;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: $border-radius-default;
+    border: 2px solid $call-to-action;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin text($fontSize, $fontWeight, $lineHeight) {
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    color: white;
+}
+
+@mixin for-type($type) {
+    @if $type==mobile {
+        @media (max-width: 834px) {
+            @content;
+        }
+    } @else if $type==tablet {
+        @media (max-width: 1280px) {
+            @content;
+        }
+    } @else if $type==desktop {
+        @media (min-width: 1280px) {
+            @content;
+        }
+    }
+}
