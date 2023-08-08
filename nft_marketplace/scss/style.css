@@ -137,27 +137,6 @@ html {
   font-family: "Work Sans", sans-serif;
 }
 
-@-webkit-keyframes sideBar {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes sideBar {
-  from {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 #navBar {
   background-color: #2b2b2b;
   display: flex;
@@ -237,23 +216,19 @@ html {
 }
 #navBar .sideBar {
   z-index: -1;
-  display: none;
+  opacity: 0;
   padding: 10px 30px;
   width: 100%;
   background-color: rgb(43, 43, 43);
-  box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.45) inset;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   position: absolute;
-  bottom: 0px;
+  bottom: -100px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
   gap: 12px;
-  -webkit-animation-name: sideBar;
-          animation-name: sideBar;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 #navBar .sideBar a {
   font-size: 16px;
@@ -351,4 +326,140 @@ html {
   #navBar .sideBar {
     display: none;
   }
+}
+#hero {
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0px;
+}
+#hero .content {
+  width: 1050px;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+#hero .content .leftHero {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+#hero .content .leftHero .topText {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 510px;
+}
+#hero .content .leftHero .topText > h1 {
+  font-size: 67px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 110%;
+  color: white;
+}
+#hero .content .leftHero .topText > p {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 160%;
+  color: white;
+}
+#hero .content .leftHero .GetStartedhero {
+  display: inline-flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: 20px;
+  background: #a259ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 224px;
+}
+#hero .content .leftHero .GetStartedhero:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#hero .content .leftHero .GetStartedhero:active {
+  transform: translateY(2px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+  scale: 0.99;
+}
+#hero .content .bottomCount {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+#hero .content .bottomCount .numbers {
+  display: flex;
+  flex-direction: column;
+}
+#hero .content .bottomCount .numbers > h4 {
+  font-size: 28px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 700;
+  line-height: 140%;
+  color: white;
+}
+#hero .content .bottomCount .numbers > p {
+  font-size: 23.99px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 160%;
+  color: white;
+}
+#hero .content .rightHero {
+  display: flex;
+  flex-direction: column;
+}
+#hero .content .rightHero > img {
+  height: 401px;
+  width: 510px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#hero .content .rightHero .rightBottom {
+  background-color: #3b3b3b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+#hero .content .rightHero .rightBottom > h5 {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+}
+#hero .content .rightHero .rightBottom .animaKid {
+  display: flex;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+#hero .content .rightHero .rightBottom .animaKid > img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+#hero .content .rightHero .rightBottom .animaKid > p {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 140%;
+  color: white;
 }

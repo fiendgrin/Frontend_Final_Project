@@ -6,7 +6,13 @@ sideBar.innerHTML = rightNav.innerHTML;
 burger.addEventListener("click", () => {
   if (sideBar.style.bottom != "-167.17px") {
     sideBar.style.bottom = "-167.17px";
+    sideBar.style.zIndex = "0";
+    sideBar.style.opacity = "1";
+
   } else {
-    sideBar.style.bottom = "0px";
+    sideBar.style.bottom = "-100px";
+    sideBar.style.zIndex = "-1";
+    sideBar.style.opacity = "0";
+
   }
 });

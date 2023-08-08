@@ -1,0 +1,80 @@
+#hero {
+    background-color: $background;
+    @include flexCenter();
+    padding: 80px 0px;
+    .content {
+        width: 1050px;
+        display: flex;
+        column-gap: 30px;
+        .leftHero {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            .topText {
+                display: flex;
+                flex-direction: column;
+                row-gap: 20px;
+                width: 510px;
+                > h1 {
+                    @include text(67px, 600, 110%);
+                }
+                > p {
+                    @include text(22px, 400, 160%);
+                }
+            }
+            .GetStartedhero {
+                @include buttonPurple(60px);
+                width: 224px;
+            }
+        }
+        .bottomCount {
+            display: flex;
+            column-gap: 30px;
+            .numbers {
+                display: flex;
+                flex-direction: column;
+                > h4 {
+                    @include text(28px, 700, 140%);
+                }
+                > p {
+                    @include text(23.99px, 400, 160%);
+                }
+            }
+        }
+        .rightHero {
+            display: flex;
+            flex-direction: column;
+            > img {
+                height: 401px;
+                width: 510px;
+                object-fit: cover;
+                border-top-left-radius: $border-radius-default;
+                border-top-right-radius: $border-radius-default;
+            }
+            .rightBottom {
+                background-color: $background-secondary;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                row-gap: 10px;
+                border-bottom-left-radius: $border-radius-default;
+                border-bottom-right-radius: $border-radius-default;
+                > h5 {
+                    @include text(22px, 600, 140%);
+                }
+                .animaKid {
+                    display: flex;
+                    column-gap: 12px;
+                    > img {
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                    }
+                    > p {
+                        @include text(16px, 400, 140%);
+                    }
+                }
+            }
+        }
+    }
+}
