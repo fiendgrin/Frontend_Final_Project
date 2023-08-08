@@ -1,0 +1,121 @@
+#navBar {
+  background-color: $background;
+  @include flexCenter();
+  position: relative;
+  .container {
+    width: $container-width;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+      > img:last-child {
+        align-self: flex-end;
+        margin-bottom: 3.6px;
+      }
+    }
+    .burger {
+      display: none;
+      cursor: pointer;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      a {
+        @include text(16px, 600, 140%);
+        text-decoration: none;
+        display: flex;
+        height: 46px;
+        padding: 0px 20px;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        &:hover {
+          scale: 1.05;
+        }
+        &:active {
+          scale: 1;
+        }
+      }
+      .signUp {
+        @include buttonPurple(60px);
+      }
+    }
+  }
+  .sideBar {
+    padding: 0px 30px;
+    width: 100%;
+    background-color: rgb(43, 43, 43);
+    box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.45) inset;
+    position: absolute;
+    bottom: -66px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    a {
+      @include text(16px, 600, 140%);
+      text-decoration: none;
+      display: flex;
+      height: 46px;
+      padding: 0px 20px;
+      justify-content: center;
+      align-items: center;
+      transition: 0.3s;
+      &:hover {
+        scale: 1.05;
+      }
+      &:active {
+        scale: 1;
+      }
+    }
+    .signUp {
+      @include buttonPurple(40px);
+      right: 50px;
+    }
+  }
+}
+
+@include for-type(tablet) {
+  #navBar {
+    .container {
+      padding: 15px 50px;
+      > a {
+        .left {
+          > img:first-child {
+            width: 24px;
+            height: 24px;
+          }
+          > img:last-child {
+            width: 149.56px;
+            height: 14.85px;
+          }
+        }
+      }
+      .burger {
+        display: initial;
+      }
+      .right {
+        display: none;
+      }
+    }
+    .sideBar {
+      a {
+      }
+      .signUp {
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  #navBar {
+    .container {
+      padding: 15px 30px;
+    }
+  }
+}

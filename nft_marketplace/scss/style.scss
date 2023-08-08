@@ -2,9 +2,12 @@
 @import "./base/typography";
 
 @import "./utilities/variables";
+@import "./utilities/animations";
 @import "./utilities/mixins";
+
 
 @import "./layout/header";
 @import "./layout/footer";
+
 
 @import "./pages/homePage";

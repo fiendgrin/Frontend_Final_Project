@@ -4,14 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./scss/style.css" />
     <title>Home Page</title>
   </head>
-  <body></body>
+  <body>
+    <section id="navBar">
+      <div class="container">
+        <a href=""
+          ><div class="left">
+            <img src="./icons/Storefront.svg" alt="" /><img
+              src="./icons/NFTMarketplace.svg"
+              alt=""
+            /></div
+        ></a>
+        <img class="burger" src="./icons/burger.svg" alt="" />
+        <div class="right">
+          <a href="">Marketplace</a>
+          <a href="">Rankings</a>
+          <a href="">Connect a wallet</a>
+          <a href="./createAccount.html">
+            <button class="signUp">
+              <img src="./icons/SignUp.svg" alt="" />Sign Up
+            </button></a
+          >
+        </div>
+      </div>
+      <div class="sideBar"></div>
+    </section>
+
+    <script src="./javascript/header.js"></script>
+  </body>
 </html>

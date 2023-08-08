@@ -1,0 +1,298 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-family: "Space Mono", monospace;
+  font-family: "Work Sans", sans-serif;
+}
+
+#navBar {
+  background-color: #2b2b2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#navBar .container {
+  width: 1280px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#navBar .container .left {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+}
+#navBar .container .left > img:last-child {
+  align-self: flex-end;
+  margin-bottom: 3.6px;
+}
+#navBar .container .burger {
+  display: none;
+  cursor: pointer;
+}
+#navBar .container .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#navBar .container .right a {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  height: 46px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+#navBar .container .right a:hover {
+  scale: 1.05;
+}
+#navBar .container .right a:active {
+  scale: 1;
+}
+#navBar .container .right .signUp {
+  display: inline-flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: 20px;
+  background: #a259ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#navBar .container .right .signUp:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#navBar .container .right .signUp:active {
+  transform: translateY(2px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+  scale: 0.99;
+}
+#navBar .sideBar {
+  padding: 0px 30px;
+  width: 100%;
+  background-color: rgb(43, 43, 43);
+  box-shadow: 0 20px 10px -20px rgba(0, 0, 0, 0.45) inset;
+  position: absolute;
+  bottom: -66px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+#navBar .sideBar a {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  height: 46px;
+  padding: 0px 20px;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+#navBar .sideBar a:hover {
+  scale: 1.05;
+}
+#navBar .sideBar a:active {
+  scale: 1;
+}
+#navBar .sideBar .signUp {
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: 20px;
+  background: #a259ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  right: 50px;
+}
+#navBar .sideBar .signUp:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#navBar .sideBar .signUp:active {
+  transform: translateY(2px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+  scale: 0.99;
+}
+
+@media (max-width: 1280px) {
+  #navBar .container {
+    padding: 15px 50px;
+  }
+  #navBar .container > a .left > img:first-child {
+    width: 24px;
+    height: 24px;
+  }
+  #navBar .container > a .left > img:last-child {
+    width: 149.56px;
+    height: 14.85px;
+  }
+  #navBar .container .burger {
+    display: initial;
+  }
+  #navBar .container .right {
+    display: none;
+  }
+}
+@media (max-width: 834px) {
+  #navBar .container {
+    padding: 15px 30px;
+  }
+}

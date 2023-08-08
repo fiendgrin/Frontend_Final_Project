@@ -1,51 +1,70 @@
 @mixin buttonPurple($height) {
-    display: inline-flex;
-    height: $height;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 50px;
-    gap: 12px;
-    border-radius: $border-radius-default;
-    background: $call-to-action;
+  display: inline-flex;
+  height: $height;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: $border-radius-default;
+  background: $call-to-action;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  &:active {
+    transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+    scale: 0.99;
+  }
 }
 
 @mixin buttonHollow($height) {
-    display: inline-flex;
-    height: $height;
-    justify-content: center;
-    align-items: center;
-    padding: 0px 50px;
-    gap: 12px;
-    border-radius: $border-radius-default;
-    border: 2px solid $call-to-action;
+  display: inline-flex;
+  height: $height;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: $border-radius-default;
+  border: 2px solid $call-to-action;
+  border: none;
+  color: $call-to-action;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 @mixin flexCenter() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin text($fontSize, $fontWeight, $lineHeight) {
-    font-size: $fontSize;
-    font-style: normal;
-    font-weight: $fontWeight;
-    line-height: $lineHeight;
-    color: white;
+  font-size: $fontSize;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: white;
 }
 
 @mixin for-type($type) {
-    @if $type==mobile {
-        @media (max-width: 834px) {
-            @content;
-        }
-    } @else if $type==tablet {
-        @media (max-width: 1280px) {
-            @content;
-        }
-    } @else if $type==desktop {
-        @media (min-width: 1280px) {
-            @content;
-        }
+  @if $type==mobile {
+    @media (max-width: 834px) {
+      @content;
     }
+  } @else if $type==tablet {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $type==desktop {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
 }
