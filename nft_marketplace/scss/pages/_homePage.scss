@@ -316,3 +316,48 @@
     }
   }
 }
+
+@include for-type(tablet) {
+  #trending {
+    padding: 40px 0px;
+
+    > h3 {
+      width: 690px;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 140%;
+    }
+    > p {
+      width: 690px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 140%;
+    }
+    .boxes {
+      margin-top: 40px;
+      .box {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  #trending {
+    > h3 {
+      width: 315px;
+    }
+    > p {
+      width: 315px;
+    }
+    .boxes {
+      .box {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
