@@ -13,7 +13,8 @@
   transition: 0.3s;
   &:hover {
     transform: translateY(-2px);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
   }
   &:active {
     transform: translateY(2px);
@@ -50,6 +51,16 @@
   font-weight: $fontWeight;
   line-height: $lineHeight;
   color: white;
+}
+
+@mixin hoverForTrending() {
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    scale: 1.05;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08), 0 2px 2px rgba(0, 0, 0, 0.12),
+      0 4px 4px rgba(0, 0, 0, 0.16), 0 8px 8px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @mixin for-type($type) {
