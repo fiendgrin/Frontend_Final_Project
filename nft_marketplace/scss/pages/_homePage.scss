@@ -361,3 +361,101 @@
     }
   }
 }
+
+#topRatedArtists {
+  background-color: $background;
+  padding: 80px 0px;
+  @include flexCenter();
+  flex-direction: column;
+  .top {
+    display: flex;
+    column-gap: 100px;
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      row-gap: 10px;
+      width: 703px;
+      > h3 {
+        @include text(38px, 600, 120%);
+      }
+      > p {
+        @include text(22px, 400, 160%);
+      }
+    }
+    .viewRankings {
+      @include buttonHollow(60px);
+      @include text(16px, 600, 140%);
+      align-self: flex-end;
+    }
+  }
+  .cards {
+    @include flexCenter();
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 1050px;
+    margin-top: 60px;
+    .card {
+      width: 240px;
+      height: 238px;
+      padding: 20px;
+      background-color: $background-secondary;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+      border-radius: $border-radius-default;
+      .top {
+        position: relative;
+        width: 100%;
+        @include flexCenter();
+        .number {
+          @include flexCenter();
+          position: absolute;
+          background-color: $background;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          left: 0;
+          top: 0;
+          @include text(16px, 400, 140%);
+          font-family: "Space Mono";
+          color: $caption-Label-Text;
+        }
+        > img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+        }
+      }
+      .bottom {
+        @include flexCenter();
+        flex-direction: column;
+        row-gap: 5px;
+        > h5 {
+          width: 200px;
+          height: 31px;
+          @include text(22px, 600, 140%);
+          text-align: center;
+        }
+        .sales {
+          display: flex;
+          column-gap: 10px;
+          > p:first-child {
+            width: 95px;
+            height: 22px;
+            @include text(16px, 400, 140%);
+            color: $caption-Label-Text;
+            text-align: center;
+          }
+          > p:last-child {
+            width: 95px;
+            height: 22px;
+            @include text(16px, 400, 140%);
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

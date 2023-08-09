@@ -24,6 +24,7 @@
 }
 
 @mixin buttonHollow($height) {
+  background-color: transparent;
   display: inline-flex;
   height: $height;
   justify-content: center;
@@ -32,10 +33,19 @@
   gap: 12px;
   border-radius: $border-radius-default;
   border: 2px solid $call-to-action;
-  border: none;
   color: $call-to-action;
   cursor: pointer;
   transition: 0.3s;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  &:active {
+    transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+    scale: 0.99;
+  }
 }
 
 @mixin flexCenter() {

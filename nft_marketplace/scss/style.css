@@ -812,3 +812,167 @@ html {
     display: none;
   }
 }
+#topRatedArtists {
+  background-color: #2b2b2b;
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#topRatedArtists .top {
+  display: flex;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+}
+#topRatedArtists .top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 10px;
+  width: 703px;
+}
+#topRatedArtists .top .left > h3 {
+  font-size: 38px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 120%;
+  color: white;
+}
+#topRatedArtists .top .left > p {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 160%;
+  color: white;
+}
+#topRatedArtists .top .viewRankings {
+  background-color: transparent;
+  display: inline-flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: 20px;
+  border: 2px solid #a259ff;
+  color: #a259ff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  align-self: flex-end;
+}
+#topRatedArtists .top .viewRankings:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+#topRatedArtists .top .viewRankings:active {
+  transform: translateY(2px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+  scale: 0.99;
+}
+#topRatedArtists .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 1050px;
+  margin-top: 60px;
+}
+#topRatedArtists .cards .card {
+  width: 240px;
+  height: 238px;
+  padding: 20px;
+  background-color: #3b3b3b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  border-radius: 20px;
+}
+#topRatedArtists .cards .card .top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#topRatedArtists .cards .card .top .number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #2b2b2b;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 140%;
+  color: white;
+  font-family: "Space Mono";
+  color: #858584;
+}
+#topRatedArtists .cards .card .top > img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+#topRatedArtists .cards .card .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 5px;
+}
+#topRatedArtists .cards .card .bottom > h5 {
+  width: 200px;
+  height: 31px;
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  text-align: center;
+}
+#topRatedArtists .cards .card .bottom .sales {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#topRatedArtists .cards .card .bottom .sales > p:first-child {
+  width: 95px;
+  height: 22px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 140%;
+  color: white;
+  color: #858584;
+  text-align: center;
+}
+#topRatedArtists .cards .card .bottom .sales > p:last-child {
+  width: 95px;
+  height: 22px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 140%;
+  color: white;
+  text-align: center;
+}
