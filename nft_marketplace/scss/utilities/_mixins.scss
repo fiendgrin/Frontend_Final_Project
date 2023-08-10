@@ -83,7 +83,7 @@
       @content;
     }
   } @else if $type==desktop {
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
       @content;
     }
   }
