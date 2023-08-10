@@ -760,3 +760,139 @@ body {
     }
   }
 }
+
+#discoverMoreNFTs {
+  @include flexCenter();
+  gap: 60px;
+  padding: 80px 0px;
+  flex-direction: column;
+  .top {
+    display: flex;
+    column-gap: 100px;
+    .left {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      row-gap: 10px;
+      width: 703px;
+      > h3 {
+        @include text(38px, 600, 120%);
+      }
+      > p {
+        @include text(22px, 400, 160%);
+      }
+    }
+    .viewRankings {
+      @include buttonHollow(60px);
+      @include text(16px, 600, 140%);
+      align-self: flex-end;
+    }
+  }
+  .nfts {
+    
+    @include flexCenter();
+    width: 1050px;
+    gap: 30px;
+    .nft {
+      border-bottom-left-radius: $border-radius-default;
+        border-bottom-right-radius: $border-radius-default;
+      transition: 0.5s;
+      &:hover{
+        scale: 1.08;
+        animation: tilt 5.2s ease-in infinite;
+        animation-direction: alternate;
+      }
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      > img {
+        width: 330px;
+        height: 296px;
+        border-top-left-radius: $border-radius-default;
+        border-top-right-radius: $border-radius-default;
+      }
+      > .bottom {
+        border-bottom-left-radius: $border-radius-default;
+        border-bottom-right-radius: $border-radius-default;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        padding: 20px 30px;
+        background-color: $background-secondary;
+        .info {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+          > h5 {
+            @include text(22px, 600, 140%);
+          }
+          .account {
+            display: flex;
+            column-gap: 12px;
+            > img {
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+            }
+            > p {
+              @include text(16px, 400, 140%);
+              font-family: "Space Mono";
+              align-self: flex-start;
+            }
+          }
+        }
+        .money {
+          display: flex;
+          column-gap: 21px;
+          
+          .left {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            > p {
+              &:first-child {
+                color: #858584;
+                font-family: "Space Mono";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: start;
+                width: 114px;
+              }
+              &:last-child {
+                @include text(16px, 400, 140%);
+                font-family: "Space Mono";
+                text-align: start;
+                width: 114px;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            > p {
+              &:first-child {
+                color: #858584;
+                font-family: "Space Mono";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: end;
+                width: 135px;
+              }
+              &:last-child {
+                @include text(16px, 400, 140%);
+                font-family: "Space Mono";
+                text-align: end;
+                width: 135px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
