@@ -820,6 +820,9 @@ html {
   align-items: center;
   flex-direction: column;
 }
+#topRatedArtists .viewRankings2 {
+  display: none;
+}
 #topRatedArtists .top {
   display: flex;
   -moz-column-gap: 100px;
@@ -897,6 +900,22 @@ html {
   align-items: center;
   row-gap: 20px;
   border-radius: 20px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+#topRatedArtists .cards .card:hover .top .number {
+  opacity: 0;
+}
+#topRatedArtists .cards .card:hover .top > img {
+  scale: 1.3;
+  border-radius: 20px;
+  transform: translateY(30px);
+  box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45);
+}
+#topRatedArtists .cards .card:hover .bottom {
+  filter: blur(3px);
+  transform: translateY(-20px);
+  opacity: 0;
 }
 #topRatedArtists .cards .card .top {
   position: relative;
@@ -924,11 +943,13 @@ html {
   color: white;
   font-family: "Space Mono";
   color: #858584;
+  transition: 0.4s;
 }
 #topRatedArtists .cards .card .top > img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
+  transition: 0.4s;
 }
 #topRatedArtists .cards .card .bottom {
   display: flex;
@@ -936,6 +957,7 @@ html {
   align-items: center;
   flex-direction: column;
   row-gap: 5px;
+  transition: 0.4s;
 }
 #topRatedArtists .cards .card .bottom > h5 {
   width: 200px;
@@ -975,4 +997,155 @@ html {
   line-height: 140%;
   color: white;
   text-align: center;
+}
+
+@media (max-width: 1280px) {
+  #topRatedArtists {
+    padding: 40px 0px;
+  }
+  #topRatedArtists .top .left {
+    width: 343px;
+    gap: 10px;
+  }
+  #topRatedArtists .top .left > h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  #topRatedArtists .top .left > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  #topRatedArtists .cards {
+    width: 690px;
+  }
+  #topRatedArtists .cards .card {
+    flex-direction: row;
+    width: 330px;
+    height: 100px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
+  #topRatedArtists .cards .card:nth-child(12) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(11) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(10) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(9) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(8) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(7) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:hover .top > img {
+    scale: 1.3;
+    border-radius: 20px;
+    transform: translateY(0px);
+    transform: translateX(86.5px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  #topRatedArtists .cards .card:hover .bottom {
+    filter: blur(3px);
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  #topRatedArtists .cards .card .top {
+    height: 60px;
+    width: 60px;
+  }
+  #topRatedArtists .cards .card .top .number {
+    left: -8px;
+    top: -7px;
+  }
+  #topRatedArtists .cards .card .top > img {
+    height: 60px;
+    width: 60px;
+  }
+  #topRatedArtists .cards .card .bottom > h5 {
+    text-align: start;
+  }
+  #topRatedArtists .cards .card .bottom .sales {
+    gap: 5px;
+  }
+  #topRatedArtists .cards .card .bottom .sales > p:first-child {
+    text-align: start;
+    width: 102, 5px;
+    height: 22px;
+  }
+  #topRatedArtists .cards .card .bottom .sales > p:last-child {
+    text-align: start;
+    width: 102, 5px;
+    height: 22px;
+  }
+}
+@media (max-width: 834px) {
+  #topRatedArtists .viewRankings2 {
+    background-color: transparent;
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: 20px;
+    border: 2px solid #a259ff;
+    color: #a259ff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: 140%;
+    color: white;
+    width: 315px;
+    margin-top: 40px;
+  }
+  #topRatedArtists .viewRankings2:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  #topRatedArtists .viewRankings2:active {
+    transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+    scale: 0.99;
+  }
+  #topRatedArtists .top .left {
+    width: 315px;
+  }
+  #topRatedArtists .top .viewRankings {
+    display: none;
+  }
+  #topRatedArtists .cards {
+    width: 315px;
+  }
+  #topRatedArtists .cards .card:nth-child(12) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(11) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(10) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(9) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(8) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(7) {
+    display: none;
+  }
+  #topRatedArtists .cards .card:nth-child(6) {
+    display: none;
+  }
 }

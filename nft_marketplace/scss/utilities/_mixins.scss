@@ -88,3 +88,11 @@
     }
   }
 }
+
+@mixin multiple-none($count,$count-from-end ) {
+  @for $i from $count-from-end through $count {
+    &:nth-child(#{$i}) {
+      display: none;
+    }
+  }
+}
