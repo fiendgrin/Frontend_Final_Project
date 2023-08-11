@@ -89,10 +89,31 @@
   }
 }
 
-@mixin multiple-none($count,$count-from-end ) {
+@mixin multiple-none($count, $count-from-end) {
   @for $i from $count-from-end through $count {
     &:nth-child(#{$i}) {
       display: none;
     }
+  }
+}
+
+@mixin input($width, $height) {
+  display: flex;
+  height: 60px;
+  padding: 16px 0px 16px 20px;
+  align-items: center;
+  gap: 12px;
+  width: $width;
+  height: $height;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: $border-radius-default;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid rgba(161, 89, 255, 0.424);
+    
+  }
+  &:focus {
+    border: 1px solid rgb(161, 89, 255);
   }
 }
