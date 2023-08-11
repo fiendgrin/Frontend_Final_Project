@@ -84,9 +84,11 @@ body {
             width: 24px;
             height: 24px;
             border-radius: 50%;
+            cursor: pointer;
           }
           > p {
             @include text(16px, 400, 140%);
+            cursor: pointer;
           }
         }
       }
@@ -229,9 +231,11 @@ body {
               width: 24px;
               height: 24px;
               border-radius: 50%;
+              cursor: pointer;
             }
             > p {
               @include text(16px, 400, 140%);
+              cursor: pointer;
             }
           }
         }
@@ -1029,6 +1033,109 @@ body {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+#nftInfo {
+  height: 640px;
+
+  @include flexCenter();
+  position: relative;
+  img {
+    height: 640px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .gradient {
+    height: 640px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+    position: absolute;
+  }
+  .content {
+    display: flex;
+    width: 1050px;
+    position: absolute;
+    top: 360px;
+    .left {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      width: 755px;
+      .artist {
+        cursor: pointer;
+        display: flex;
+        column-gap: 12px;
+        background-color: $background-secondary;
+        padding: 10px 20px;
+        border-radius: $border-radius-default;
+        width: 151px;
+        > img {
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+        }
+        > p {
+          @include text(16px, 400, 140%);
+        }
+      }
+      > h2 {
+        @include text(51px, 600, 110%);
+      }
+      .seeNft {
+        @include buttonPurple(60px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include text(16px, 600, 140%);
+        color: black;
+        background-color: white;
+
+        width: 198px;
+        > img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+    .timerBox {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: $border-radius-default;
+      background: rgba(59, 59, 59, 0.5);
+      backdrop-filter: blur(5px);
+      height: 147px;
+      align-self: flex-end;
+      > p {
+        width: 235px;
+        @include text(12px, 400, 110%);
+        font-family: "Space Mono";
+      }
+      .timer {
+        display: flex;
+        column-gap: 10px;
+        .time {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+          width: 53px;
+          > h3 {
+            @include text(38px, 700, 120%);
+            font-family: "Space Mono";
+          }
+          > p {
+            @include text(12px, 400, 110%);
+            font-family: "Space Mono";
+          }
+        }
+        .dots{
+          width: 18px;
+          @include text(28px, 700, 140%);
+          text-align: center;
         }
       }
     }
