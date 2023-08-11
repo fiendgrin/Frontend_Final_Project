@@ -2265,11 +2265,84 @@ body {
   box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
   scale: 0.99;
 }
-#subscribeWidget .content .right .emailBox > p {
-  position: absolute;
-  left: 14px;
-  bottom: -20px;
-  color: red;
-  font-size: 16px;
-  display: none;
+
+@media (max-width: 1280px) {
+  #subscribeWidget .content {
+    padding: 40px 30px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  #subscribeWidget .content > img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 300px;
+    height: 280px;
+  }
+  #subscribeWidget .content .right {
+    width: 300px;
+    height: 280px;
+  }
+  #subscribeWidget .content .right .top > h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+    height: 78px;
+    text-transform: capitalize;
+  }
+  #subscribeWidget .content .right .top > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    height: 44px;
+  }
+  #subscribeWidget .content .right .emailBox {
+    width: 300px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #subscribeWidget .content .right .emailBox > .emailInput {
+    width: 300px;
+    height: 46px;
+    padding: 16px 20px;
+  }
+  #subscribeWidget .content .right .emailBox > .emailBtn {
+    width: 300px;
+    height: 46px;
+    position: static;
+  }
+}
+@media (max-width: 834px) {
+  #subscribeWidget {
+    padding: 40px 0px;
+  }
+  #subscribeWidget .content {
+    padding: 0px;
+    flex-direction: column;
+    row-gap: 30px;
+    background-color: transparent;
+  }
+  #subscribeWidget .content > img {
+    width: 315px;
+    height: 255px;
+  }
+  #subscribeWidget .content .right {
+    width: 315px;
+    height: 280px;
+    gap: 40px;
+  }
+  #subscribeWidget .content .right .emailBox {
+    width: 300px;
+    height: 108px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #subscribeWidget .content .right .emailBox > .emailInput {
+    width: 315px;
+  }
+  #subscribeWidget .content .right .emailBox > .emailBtn {
+    width: 315px;
+  }
 }

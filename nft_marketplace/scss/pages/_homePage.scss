@@ -1438,13 +1438,97 @@ body {
             scale: 0.99;
           }
         }
-        > p {
-          position: absolute;
-          left: 14px;
-          bottom: -20px;
-          color: red;
-          font-size: 16px;
-          display: none;
+        // > p {
+        //   position: absolute;
+        //   left: 14px;
+        //   bottom: -20px;
+        //   color: red;
+        //   font-size: 16px;
+        //   display: none;
+        // }
+      }
+    }
+  }
+}
+
+@include for-type(tablet) {
+  #subscribeWidget {
+    .content {
+      padding: 40px 30px;
+      column-gap: 30px;
+      > img {
+        object-fit: cover;
+        width: 300px;
+        height: 280px;
+      }
+      .right {
+        width: 300px;
+        height: 280px;
+        .top {
+          > h3 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 140%;
+            height: 78px;
+            text-transform: capitalize;
+          }
+          > p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%;
+            height: 44px;
+          }
+        }
+        .emailBox {
+          width: 300px;
+          height: 108px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          > .emailInput {
+            width: 300px;
+            height: 46px;
+            padding: 16px 20px;
+          }
+          > .emailBtn {
+            width: 300px;
+            height: 46px;
+            position: static;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  #subscribeWidget {
+    padding: 40px 0px;
+    .content {
+      padding: 0px;
+      flex-direction: column;
+      row-gap: 30px;
+      background-color: transparent;
+      > img {
+        width: 315px;
+        height: 255px;
+      }
+      .right {
+        width: 315px;
+        height: 280px;
+        gap: 40px;
+        .emailBox {
+          width: 300px;
+          height: 108px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          > .emailInput {
+            width: 315px;
+          }
+          > .emailBtn {
+            width: 315px;
+          }
         }
       }
     }
