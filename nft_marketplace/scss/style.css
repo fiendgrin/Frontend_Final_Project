@@ -2054,3 +2054,86 @@ body {
   text-align: center;
   height: 88px;
 }
+
+@media (max-width: 1280px) {
+  #howItWorks {
+    padding: 40px 0px;
+    row-gap: 40px;
+  }
+  #howItWorks .top {
+    width: 690px;
+  }
+  #howItWorks .top > h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  #howItWorks .top > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  #howItWorks .cards .card {
+    padding: 10px 20px 30px 20px;
+  }
+  #howItWorks .cards .card > img {
+    height: 160px;
+  }
+  #howItWorks .cards .card .text {
+    width: 170px;
+  }
+  #howItWorks .cards .card .text > h5 {
+    font-size: 16px;
+    height: 22px;
+  }
+  #howItWorks .cards .card .text > p {
+    font-size: 12px;
+    height: 68px;
+  }
+}
+@media (max-width: 834px) {
+  #howItWorks .top {
+    width: 315px;
+  }
+  #howItWorks .top > h3 {
+    font-size: 38px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: 120%;
+    color: white;
+  }
+  #howItWorks .top > p {
+    font-size: 22px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 400;
+    line-height: 160%;
+    color: white;
+  }
+  #howItWorks .cards {
+    gap: 30px;
+    flex-direction: column;
+  }
+  #howItWorks .cards .card {
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 315px;
+    align-items: center;
+  }
+  #howItWorks .cards .card > img {
+    height: 100px;
+  }
+  #howItWorks .cards .card .text {
+    width: 155px;
+  }
+  #howItWorks .cards .card .text > h5 {
+    text-align: start;
+    align-self: start;
+  }
+  #howItWorks .cards .card .text > p {
+    text-align: start;
+    height: 85px;
+  }
+}

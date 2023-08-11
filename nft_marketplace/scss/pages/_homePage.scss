@@ -1280,7 +1280,7 @@ body {
           text-align: center;
           height: 31px;
         }
-        > p  {
+        > p {
           @include text(16px, 200, 140%);
           text-align: center;
           height: 88px;
@@ -1290,4 +1290,80 @@ body {
   }
 }
 
+@include for-type(tablet) {
+  #howItWorks {
+    padding: 40px 0px;
+    row-gap: 40px;
+    .top {
+      width: 690px;
+      > h3 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 140%;
+      }
+      > p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 140%;
+      }
+    }
+    .cards {
+      .card {
+        padding: 10px 20px 30px 20px;
+        > img {
+          height: 160px;
+        }
+        .text {
+          width: 170px;
+          > h5 {
+            font-size: 16px;
+            height: 22px;
+          }
+          > p {
+            font-size: 12px;
+            height: 68px;
+          }
+        }
+      }
+    }
+  }
+}
 
+@include for-type(mobile) {
+  #howItWorks {
+    .top {
+      width: 315px;
+      > h3 {
+        @include text(38px, 600, 120%);
+      }
+      > p {
+        @include text(22px, 400, 160%);
+      }
+    }
+    .cards {
+      gap: 30px;
+      flex-direction: column;
+      .card {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 315px;
+        align-items: center;
+        > img {
+          height: 100px;
+        }
+        .text {
+          width: 155px;
+          > h5 {
+            text-align: start;
+            align-self: start;
+          }
+          > p {
+            text-align: start;
+            height: 85px;
+          }
+        }
+      }
+    }
+  }
+}
