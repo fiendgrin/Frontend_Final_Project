@@ -1718,6 +1718,9 @@ body {
   position: absolute;
   top: 360px;
 }
+#nftInfo .content .seeNft2 {
+  display: none;
+}
 #nftInfo .content .left {
   display: flex;
   flex-direction: column;
@@ -1853,4 +1856,126 @@ body {
   line-height: 140%;
   color: white;
   text-align: center;
+}
+
+@media (max-width: 1280px) {
+  #nftInfo {
+    height: 630px;
+  }
+  #nftInfo img {
+    height: 630px;
+  }
+  #nftInfo .gradient {
+    height: 630px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(162, 89, 255, 0) 0%, #a259ff 100%);
+    position: absolute;
+  }
+  #nftInfo .content {
+    width: 670px;
+  }
+  #nftInfo .content .left {
+    row-gap: 30px;
+    width: 375px;
+  }
+  #nftInfo .content .left > h2 {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+@media (max-width: 834px) {
+  #nftInfo {
+    height: 593px;
+  }
+  #nftInfo img {
+    height: 593px;
+  }
+  #nftInfo .gradient {
+    height: 593px;
+  }
+  #nftInfo .content {
+    width: 315px;
+    top: 120px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+  }
+  #nftInfo .content .seeNft2 {
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: 20px;
+    background: #a259ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: 140%;
+    color: white;
+    color: black;
+    background-color: white;
+    width: 315px;
+  }
+  #nftInfo .content .seeNft2:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  #nftInfo .content .seeNft2:active {
+    transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+    scale: 0.99;
+  }
+  #nftInfo .content .seeNft2 > img {
+    height: 20px;
+    width: 20px;
+  }
+  #nftInfo .content .left {
+    row-gap: 30px;
+    width: 315px;
+  }
+  #nftInfo .content .left .artist {
+    cursor: pointer;
+    display: flex;
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+    background-color: #3b3b3b;
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 151px;
+  }
+  #nftInfo .content .left .artist > img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+  #nftInfo .content .left .artist > p {
+    font-size: 16px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 400;
+    line-height: 140%;
+    color: white;
+  }
+  #nftInfo .content .left .seeNft {
+    display: none;
+  }
+  #nftInfo .content .timerBox {
+    width: 315px;
+  }
+  #nftInfo .content .timerBox > p {
+    width: 255px;
+  }
+  #nftInfo .content .timerBox .timer .time {
+    width: 59.66px;
+  }
 }

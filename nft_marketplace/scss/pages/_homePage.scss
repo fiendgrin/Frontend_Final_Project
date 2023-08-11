@@ -1041,7 +1041,6 @@ body {
 
 #nftInfo {
   height: 640px;
-
   @include flexCenter();
   position: relative;
   img {
@@ -1060,6 +1059,9 @@ body {
     width: 1050px;
     position: absolute;
     top: 360px;
+    .seeNft2 {
+      display: none;
+    }
     .left {
       display: flex;
       flex-direction: column;
@@ -1132,10 +1134,108 @@ body {
             font-family: "Space Mono";
           }
         }
-        .dots{
+        .dots {
           width: 18px;
           @include text(28px, 700, 140%);
           text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@include for-type(tablet) {
+  #nftInfo {
+    height: 630px;
+    img {
+      height: 630px;
+    }
+    .gradient {
+      height: 630px;
+      width: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(162, 89, 255, 0) 0%,
+        #a259ff 100%
+      );
+      position: absolute;
+    }
+    .content {
+      width: 670px;
+      .left {
+        row-gap: 30px;
+        width: 375px;
+        > h2 {
+          font-size: 38px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  #nftInfo {
+    height: 593px;
+    img {
+      height: 593px;
+    }
+    .gradient {
+      height: 593px;
+    }
+    .content {
+      width: 315px;
+      top: 120px;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+      .seeNft2 {
+        @include buttonPurple(60px);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @include text(16px, 600, 140%);
+        color: black;
+        background-color: white;
+        width: 315px;
+        > img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+      .left {
+        row-gap: 30px;
+        width: 315px;
+        .artist {
+          cursor: pointer;
+          display: flex;
+          column-gap: 12px;
+          background-color: $background-secondary;
+          padding: 10px 20px;
+          border-radius: $border-radius-default;
+          width: 151px;
+          > img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+          }
+          > p {
+            @include text(16px, 400, 140%);
+          }
+        }
+        .seeNft {
+          display: none;
+        }
+      }
+      .timerBox {
+        width: 315px;
+        > p {
+          width: 255px;
+        }
+        .timer {
+          .time {
+            width: 59.66px;
+          }
         }
       }
     }
