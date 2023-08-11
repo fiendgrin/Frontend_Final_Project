@@ -1979,3 +1979,78 @@ body {
     width: 59.66px;
   }
 }
+#howItWorks {
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 48px;
+}
+#howItWorks .top {
+  width: 1050px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#howItWorks .top > h3 {
+  font-size: 38px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 120%;
+  color: white;
+}
+#howItWorks .top > p {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 160%;
+  color: white;
+}
+#howItWorks .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+#howItWorks .cards .card {
+  padding: 10px 30px 30px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: #3b3b3b;
+  border-radius: 20px;
+}
+#howItWorks .cards .card .text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 270px;
+}
+#howItWorks .cards .card .text > h5 {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  text-align: center;
+  height: 31px;
+}
+#howItWorks .cards .card .text > p {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 200;
+  line-height: 140%;
+  color: white;
+  text-align: center;
+  height: 88px;
+}

@@ -1241,3 +1241,53 @@ body {
     }
   }
 }
+
+#howItWorks {
+  padding: 80px 0px;
+  @include flexCenter();
+  flex-direction: column;
+  row-gap: 48px;
+  .top {
+    width: 1050px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    > h3 {
+      @include text(38px, 600, 120%);
+    }
+    > p {
+      @include text(22px, 400, 160%);
+    }
+  }
+  .cards {
+    @include flexCenter();
+    gap: 30px;
+    flex-wrap: wrap;
+    .card {
+      padding: 10px 30px 30px 30px;
+      @include flexCenter();
+      flex-direction: column;
+      row-gap: 20px;
+      background-color: $background-secondary;
+      border-radius: $border-radius-default;
+      .text {
+        @include flexCenter();
+        flex-direction: column;
+        row-gap: 10px;
+        width: 270px;
+        > h5 {
+          @include text(22px, 600, 140%);
+          text-align: center;
+          height: 31px;
+        }
+        > p  {
+          @include text(16px, 200, 140%);
+          text-align: center;
+          height: 88px;
+        }
+      }
+    }
+  }
+}
+
+
