@@ -100,6 +100,9 @@ footer {
           line-height: 140%;
         }
         > .emailBtn {
+          >img{
+            display: none;
+          }
           position: absolute;
           right: 0;
           top: 0;
@@ -133,6 +136,121 @@ footer {
     .copyright {
       font-size: 12px;
       line-height: 110%;
+    }
+  }
+}
+
+@include for-type(tablet) {
+  footer {
+    justify-content: flex-start;
+    gap: 49px;
+    .top {
+      flex-direction: column;
+      width: 690px;
+      .left {
+        gap: 20px;
+        > .bottom {
+          width: 690px;
+          p {
+            &:first-child {
+              height: 22px;
+            }
+            &:nth-child(2) {
+              height: 22px;
+            }
+          }
+        }
+      }
+      .middle {
+        gap: 20px;
+        margin-left: 0px;
+        margin-top: 30px;
+        width: 690px;
+        > .bottom {
+          gap: 20px;
+        }
+      }
+      .right {
+        width: 690px;
+        > h5 {
+          margin-bottom: 20px;
+        }
+        > p {
+          width: 690px;
+        }
+      }
+    }
+    .underline {
+      .line {
+        width: 690px;
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  footer {
+    gap: 30px;
+    .top {
+      width: 315px;
+      .left {
+        gap: 20px;
+        > .bottom {
+          width: 315px;
+          p {
+            &:first-child {
+              height: 44px;
+            }
+            &:nth-child(2) {
+              height: 18px;
+            }
+          }
+        }
+      }
+      .middle {
+        width: 315px;
+      }
+      .right {
+        width: 315px;
+        > p {
+          width: 315px;
+        }
+        .emailBox {
+          width: 315px;
+          height: 108px;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          > .emailInput {
+            width: 315px;
+            height: 46px;
+            padding-right: 20px;
+          }
+          > .emailBtn {
+            align-items: center;
+            >img{
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+            }
+            position: static;
+            width: 315px;
+            height: 46px;
+          }
+        }
+      }
+    }
+    .underline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .line {
+        width: 315px;
+      }
+      .copyright {
+        font-size: 12px;
+        line-height: 110%;
+      }
     }
   }
 }
