@@ -171,6 +171,22 @@ html {
     box-shadow: -25px 0 20px -20px #a259ff;
   }
 }
+@keyframes toastSlide {
+  80% {
+    left: -15px;
+  }
+  90% {
+    left: 15px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes toastTimer {
+  100% {
+    width: 0px;
+  }
+}
 #navBar {
   background-color: #2b2b2b;
   display: flex;
@@ -358,6 +374,188 @@ html {
 @media (min-width: 1281px) {
   #navBar .sideBar {
     display: none;
+  }
+}
+#toastBox {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+  overflow: hidden;
+}
+#toastBox .invalid {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 2px;
+  background-color: white;
+  width: 250px;
+  height: 60px;
+  font-size: 14px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 14px;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+  left: calc(100% + 30px);
+}
+#toastBox .invalid .imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+}
+#toastBox .invalid .imageBox > img {
+  height: 25px;
+}
+#toastBox .invalid::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color: #ff0015;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+}
+#toastBox .success {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 2px;
+  background-color: white;
+  width: 250px;
+  height: 60px;
+  font-size: 14px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 0px 14px;
+  justify-content: flex-start;
+  gap: 10px;
+  position: relative;
+  left: calc(100% + 30px);
+}
+#toastBox .success .imageBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+}
+#toastBox .success .imageBox > img {
+  height: 25px;
+}
+#toastBox .success::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background-color: #4fc232;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  width: 100%;
+  bottom: 0px;
+  left: 0;
+}
+#toastBox .animated {
+  animation: toastSlide 0.5s ease-out forwards;
+}
+#toastBox .animated::after {
+  animation: toastTimer 1.5s linear 0.5s forwards;
+}
+
+@media (max-width: 1280px) {
+  #toastBox {
+    gap: 12px;
+    right: 25px;
+    top: 25px;
+  }
+  #toastBox .invalid {
+    width: 200px;
+    height: 55px;
+    font-size: 12px;
+    padding: 0px 0px 0px 12px;
+    gap: 10px;
+    left: calc(100% + 25px);
+  }
+  #toastBox .invalid .imageBox > img {
+    height: 20px;
+  }
+  #toastBox .invalid::after {
+    height: 3px;
+  }
+  #toastBox .success {
+    width: 200px;
+    height: 55px;
+    font-size: 12px;
+    padding: 0px 0px 0px 12px;
+    gap: 10px;
+    left: calc(100% + 25px);
+  }
+  #toastBox .success .imageBox > img {
+    height: 20px;
+  }
+  #toastBox .success::after {
+    height: 3px;
+  }
+  #toastBox .animated {
+    animation: toastSlide 0.5s ease-out forwards;
+  }
+  #toastBox .animated::after {
+    animation: toastTimer 1.5s linear 0.5s forwards;
+  }
+}
+@media (max-width: 834px) {
+  #toastBox {
+    gap: 8px;
+    right: 10px;
+    top: 10px;
+  }
+  #toastBox .invalid {
+    width: 180px;
+    height: 45px;
+    font-size: 10px;
+    padding: 0px 0px 0px 12px;
+    gap: 10px;
+    left: calc(100% + 25px);
+  }
+  #toastBox .invalid .imageBox > img {
+    height: 18px;
+  }
+  #toastBox .invalid::after {
+    height: 2px;
+  }
+  #toastBox .success {
+    width: 180px;
+    height: 45px;
+    font-size: 10px;
+    padding: 0px 0px 0px 12px;
+    gap: 10px;
+    left: calc(100% + 25px);
+  }
+  #toastBox .success .imageBox > img {
+    height: 18px;
+  }
+  #toastBox .success::after {
+    height: 2px;
+  }
+  #toastBox .animated {
+    animation: toastSlide 0.5s ease-out forwards;
+  }
+  #toastBox .animated::after {
+    animation: toastTimer 1.5s linear 0.5s forwards;
   }
 }
 body {

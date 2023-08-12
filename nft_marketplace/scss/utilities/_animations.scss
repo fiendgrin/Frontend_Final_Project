@@ -32,3 +32,21 @@
     box-shadow: -25px 0 20px -20px #a259ff;
   }
 }
+
+@keyframes toastSlide {
+  80%{
+    left: -15px;
+  }
+  90%{
+    left: 15px;
+  }
+  100%{
+    left: 0px;
+  }
+}
+
+@keyframes toastTimer {
+  100%{
+    width: 0px;
+  }
+}
