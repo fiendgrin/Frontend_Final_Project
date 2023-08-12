@@ -20,4 +20,13 @@ function countdown() {
       hour.innerHTML = (parseInt(hour.innerHTML) - 1).toString();
     }
   }
+  if (hour.innerHTML.length == 1) {
+    hour.innerHTML = "0" + hour.innerHTML;
+  }
+  if (minute.innerHTML.length == 1) {
+    minute.innerHTML = "0" + minute.innerHTML;
+  }
+  if (second.innerHTML.length == 1) {
+    second.innerHTML = "0" + second.innerHTML;
+  }
 }

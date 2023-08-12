@@ -376,6 +376,200 @@ html {
     display: none;
   }
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 0px;
+  gap: 30px;
+  background-color: #3b3b3b;
+}
+footer p {
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 400;
+  line-height: 140%;
+  color: white;
+  color: #ccc;
+}
+footer .top {
+  display: flex;
+}
+footer .top .left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .top .left .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 32px;
+}
+footer .top .left .logo > img:first-child {
+  height: 32px;
+  width: 32px;
+}
+footer .top .left .logo > img:last-child {
+  width: 199.414px;
+  height: 19.8px;
+}
+footer .top .left > .bottom {
+  width: 238px;
+  display: flex;
+  flex-direction: column;
+}
+footer .top .left > .bottom p:first-child {
+  margin-bottom: 20px;
+  height: 44px;
+}
+footer .top .left > .bottom p:nth-child(2) {
+  height: 18px;
+}
+footer .top .left > .bottom .links {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+footer .top .left > .bottom .links img {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+footer .top .middle {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 166px;
+  margin-left: 84px;
+  width: 240px;
+}
+footer .top .middle > h5 {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 700;
+  line-height: 160%;
+  color: white;
+  font-family: "Space Mono";
+}
+footer .top .middle > .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .top .middle > .bottom > p {
+  cursor: pointer;
+}
+footer .top .right {
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+}
+footer .top .right > h5 {
+  font-size: 22px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 700;
+  line-height: 160%;
+  color: white;
+  font-family: "Space Mono";
+  margin-bottom: 25px;
+}
+footer .top .right > p {
+  width: 330px;
+  margin-bottom: 20px;
+}
+footer .top .right .emailBox {
+  width: 420px;
+  height: 60px;
+  position: relative;
+}
+footer .top .right .emailBox > .emailInput {
+  display: flex;
+  height: 60px;
+  padding: 16px 0px 16px 20px;
+  align-items: center;
+  gap: 12px;
+  width: 420px;
+  height: 60px;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  transition: 0.3s;
+  padding-right: 191px;
+  font-family: "Work Sans";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+}
+footer .top .right .emailBox > .emailInput:hover {
+  border: 1px solid rgba(161, 89, 255, 0.424);
+}
+footer .top .right .emailBox > .emailInput:focus {
+  border: 1px solid rgb(161, 89, 255);
+}
+footer .top .right .emailBox > .emailBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-flex;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 50px;
+  gap: 12px;
+  border-radius: 20px;
+  background: #a259ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #a259ff;
+  width: 179px;
+  font-size: 16px;
+  font-style: normal;
+  font-family: Work Sans;
+  font-weight: 600;
+  line-height: 140%;
+  color: white;
+}
+footer .top .right .emailBox > .emailBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+footer .top .right .emailBox > .emailBtn:active {
+  transform: translateY(2px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+  scale: 0.99;
+}
+footer .top .right .emailBox > .emailBtn:hover {
+  transform: translateY(0px);
+  box-shadow: rgba(0, 0, 0, 0.205) 0px 10px 20px, rgba(0, 0, 0, 0.171) 0px 8px 8px;
+}
+footer .top .right .emailBox > .emailBtn:active {
+  transform: translateY(0px);
+  box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+  scale: 0.99;
+}
+footer .underline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .underline .line {
+  width: 1049.414px;
+  height: 1px;
+  background-color: #858584;
+}
+footer .underline .copyright {
+  font-size: 12px;
+  line-height: 110%;
+}
+
 #toastBox {
   display: flex;
   flex-direction: column;
@@ -510,12 +704,6 @@ html {
   #toastBox .success::after {
     height: 3px;
   }
-  #toastBox .animated {
-    animation: toastSlide 0.5s ease-out forwards;
-  }
-  #toastBox .animated::after {
-    animation: toastTimer 1.5s linear 0.5s forwards;
-  }
 }
 @media (max-width: 834px) {
   #toastBox {
@@ -524,10 +712,10 @@ html {
     top: 10px;
   }
   #toastBox .invalid {
-    width: 180px;
+    width: 190px;
     height: 45px;
-    font-size: 10px;
-    padding: 0px 0px 0px 12px;
+    font-size: 12px;
+    padding: 0px 0px 0px 2px;
     gap: 10px;
     left: calc(100% + 25px);
   }
@@ -540,8 +728,8 @@ html {
   #toastBox .success {
     width: 180px;
     height: 45px;
-    font-size: 10px;
-    padding: 0px 0px 0px 12px;
+    font-size: 12px;
+    padding: 0px 0px 0px 2px;
     gap: 10px;
     left: calc(100% + 25px);
   }
@@ -550,12 +738,6 @@ html {
   }
   #toastBox .success::after {
     height: 2px;
-  }
-  #toastBox .animated {
-    animation: toastSlide 0.5s ease-out forwards;
-  }
-  #toastBox .animated::after {
-    animation: toastTimer 1.5s linear 0.5s forwards;
   }
 }
 body {

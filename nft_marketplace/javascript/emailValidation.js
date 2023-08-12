@@ -1,17 +1,20 @@
-const sendMail = document.querySelector("#subscribeWidget .emailBtn");
+const sendMailbtns = document.querySelectorAll(
+  "#subscribeWidget .emailBtn,footer .emailBtn"
+);
 const toastBox = document.querySelector("#toastBox");
-const emailInput = document.querySelector(".emailInput");
 const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
-sendMail.addEventListener("click", () => {
-  
-  let newDiv = document.createElement('div') 
-  newDiv.innerHTML = toastMaker(validator(emailInput.value.trim()));
-  // toastBox.lastElementChild.classList.add("animated");
-  toastBox.appendChild(newDiv)
-  setTimeout(() => {
-    toastBox.firstElementChild.remove();
-  }, 2000);
+sendMailbtns.forEach((sendMail) => {
+  sendMail.addEventListener("click", () => {
+    let newDiv = document.createElement("div");
+    newDiv.innerHTML = toastMaker(
+      validator(sendMail.previousElementSibling.value.trim())
+    );
+    toastBox.appendChild(newDiv);
+    setTimeout(() => {
+      toastBox.firstElementChild.remove();
+    }, 2000);
+  });
 });
 
 function toastMaker(isValid) {

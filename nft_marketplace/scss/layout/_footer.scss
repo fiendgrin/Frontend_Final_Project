@@ -1,0 +1,138 @@
+footer {
+  @include flexCenter();
+  flex-direction: column;
+  padding: 40px 0px;
+  gap: 30px;
+  background-color: $background-secondary;
+  p {
+    @include text(16px, 400, 140%);
+    color: #ccc;
+  }
+  .top {
+    display: flex;
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        > img:first-child {
+          height: 32px;
+          width: 32px;
+        }
+        > img:last-child {
+          width: 199.414px;
+          height: 19.8px;
+        }
+        height: 32px;
+      }
+      > .bottom {
+        width: 238px;
+        display: flex;
+        flex-direction: column;
+        p {
+          &:first-child {
+            margin-bottom: 20px;
+            height: 44px;
+          }
+          &:nth-child(2) {
+            height: 18px;
+          }
+        }
+        .links {
+          margin-top: 15px;
+          display: flex;
+          gap: 10px;
+          img {
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+    }
+    .middle {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 166px;
+      margin-left: 84px;
+      width: 240px;
+      > h5 {
+        @include text(22px, 700, 160%);
+        font-family: "Space Mono";
+      }
+      > .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        > p {
+          cursor: pointer;
+        }
+      }
+    }
+    .right {
+      width: 420px;
+      display: flex;
+      flex-direction: column;
+      > h5 {
+        @include text(22px, 700, 160%);
+        font-family: "Space Mono";
+        margin-bottom: 25px;
+      }
+      > p {
+        width: 330px;
+        margin-bottom: 20px;
+      }
+      .emailBox {
+        width: 420px;
+        height: 60px;
+        position: relative;
+        > .emailInput {
+          @include input(420px, 60px);
+          padding-right: 191px;
+          font-family: "Work Sans";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+        > .emailBtn {
+          position: absolute;
+          right: 0;
+          top: 0;
+          @include buttonPurple(60px);
+          border: 1px solid $call-to-action;
+          width: 179px;
+          @include text(16px, 600, 140%);
+          &:hover {
+            transform: translateY(0px);
+            box-shadow: rgba(0, 0, 0, 0.205) 0px 10px 20px,
+              rgba(0, 0, 0, 0.171) 0px 8px 8px;
+          }
+          &:active {
+            transform: translateY(0px);
+            box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+            scale: 0.99;
+          }
+        }
+      }
+    }
+  }
+  .underline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .line {
+      width: 1049.414px;
+      height: 1px;
+      background-color: $caption-Label-Text;
+    }
+    .copyright {
+      font-size: 12px;
+      line-height: 110%;
+    }
+  }
+}
