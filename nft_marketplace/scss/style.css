@@ -415,10 +415,12 @@ footer .top .left .logo {
   height: 32px;
 }
 footer .top .left .logo > img:first-child {
+  cursor: pointer;
   height: 32px;
   width: 32px;
 }
 footer .top .left .logo > img:last-child {
+  cursor: pointer;
   width: 199.414px;
   height: 19.8px;
 }
@@ -2929,6 +2931,14 @@ body {
   position: absolute;
   left: 20px;
   top: 13px;
+}
+#imagePlaceholder .right > form > .box > p {
+  position: absolute;
+  left: 14px;
+  bottom: -12.5px;
+  color: red;
+  font-size: 11px;
+  display: none;
 }
 #imagePlaceholder .right > form > button {
   display: inline-flex;

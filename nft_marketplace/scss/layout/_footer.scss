@@ -19,10 +19,12 @@ footer {
         align-items: center;
         gap: 12px;
         > img:first-child {
+          cursor: pointer;
           height: 32px;
           width: 32px;
         }
         > img:last-child {
+          cursor: pointer;
           width: 199.414px;
           height: 19.8px;
         }
@@ -100,7 +102,7 @@ footer {
           line-height: 140%;
         }
         > .emailBtn {
-          >img{
+          > img {
             display: none;
           }
           position: absolute;
@@ -228,7 +230,7 @@ footer {
           }
           > .emailBtn {
             align-items: center;
-            >img{
+            > img {
               display: inline-block;
               width: 20px;
               height: 20px;

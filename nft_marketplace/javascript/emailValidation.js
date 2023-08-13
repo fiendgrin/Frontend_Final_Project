@@ -8,7 +8,7 @@ sendMailbtns.forEach((sendMail) => {
   sendMail.addEventListener("click", () => {
     let newDiv = document.createElement("div");
     newDiv.innerHTML = toastMaker(
-      validator(sendMail.previousElementSibling.value.trim())
+      emailValidator(sendMail.previousElementSibling.value.trim())
     );
     toastBox.appendChild(newDiv);
     setTimeout(() => {
@@ -33,6 +33,6 @@ function toastMaker(isValid) {
   }
 }
 
-function validator(text) {
+function emailValidator(text) {
   return regexEmail.test(text);
 }

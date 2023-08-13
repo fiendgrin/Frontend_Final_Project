@@ -52,6 +52,14 @@
           left: 20px;
           top: 13px;
         }
+         > p {
+          position: absolute;
+          left: 14px;
+          bottom: -12.5px;
+          color: red;
+          font-size: 11px;
+          display: none;
+        }
       }
       > button {
         @include buttonPurple(46px);
