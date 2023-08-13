@@ -1,5 +1,23 @@
 const nfts = document.querySelector("#nsftsToFavorites .nfts");
 
+window.addEventListener("DOMContentLoaded", () => {
+  const counterValue = JSON.parse(localStorage.getItem("Counter"));
+  if (counterValue) {
+    tabs[1].firstElementChild.textContent = counterValue;
+  } else {
+    tabs[1].firstElementChild.textContent = "0";
+  }
+  allFavouritesData = JSON.parse(localStorage.getItem("Favourites")) || [];
+
+  hearts.forEach((heart) => {
+    allFavouritesData.forEach((allFavouritesData) => {
+      if (heart.id == allFavouritesData.id) {
+        heart.style.opacity = "1";
+      }
+    });
+  });
+});
+
 const allNftData = [
   { id: 1, name: "Distant Galaxy", image: "1.png" },
   { id: 2, name: "Life On Edena", image: "2.png" },
@@ -18,49 +36,49 @@ function nftMaker(id, name, image, favorite) {
     <img src="./${image}" alt="" />
     <div class="bottom">
       <div class="info">
-        <h5>${name}</h5>
+      <h5>${name}</h5>
         <div class="account">
-          <img src="./images/AvatarPlaceholder.png" alt="" />
+        <img src="./images/AvatarPlaceholder.png" alt="" />
           <p>MoonDancer</p>
-        </div>
-      </div>
-      <div class="money">
-        <div class="left">
+          </div>
+          </div>
+          <div class="money">
+          <div class="left">
           <p>Price</p>
           <p>1.63 ETH</p>
-        </div>
-        <div class="right">
+          </div>
+          <div class="right">
           <p>Highest Bid</p>
           <p>0.33 wETH</p>
-        </div>
-      </div>
-    </div>
-  </div>`;
+          </div>
+          </div>
+          </div>
+          </div>`;
   } else {
     return `<div id="${id}" class="nft">
     <img src="./images/nftToFavorite/${image}" alt="" />
     <div class="bottom">
-      <div class="info">
-        <h5>${name}</h5>
-        <div class="account">
-          <img src="./images/AvatarPlaceholder.png" alt="" />
-          <p>MoonDancer</p>
-        </div>
-      </div>
-      <div class="money">
-        <div class="left">
-          <p>Price</p>
+    <div class="info">
+    <h5>${name}</h5>
+    <div class="account">
+    <img src="./images/AvatarPlaceholder.png" alt="" />
+    <p>MoonDancer</p>
+    </div>
+    </div>
+    <div class="money">
+    <div class="left">
+    <p>Price</p>
           <p>1.63 ETH</p>
-        </div>
-        <div class="right">
+          </div>
+          <div class="right">
           <p>Highest Bid</p>
           <p>0.33 wETH</p>
-        </div>
-      </div>
-    </div>
-    <img id="${id}" class="heart" src="./icons/heart.svg" alt="" />
-    <img id="${id}" class="heartHollow" src="./icons/heartHollow.svg" alt="" />
-  </div>`;
+          </div>
+          </div>
+          </div>
+          <img id="${id}" class="heart" src="./icons/heart.svg" alt="" />
+          <img id="${id}" class="heartHollow" src="./icons/heartHollow.svg" alt="" />
+          </div>`;
   }
 }
 
@@ -76,10 +94,39 @@ nftAdder(allNftData, false);
 let cards = document.querySelectorAll(".nfts .nft");
 let hearts = document.querySelectorAll(".nfts .nft .heart");
 const tabs = document.querySelectorAll("#nsftsToFavorites .top .box .tab");
-
-const allFavouritesData = [];
+tabs[1].firstElementChild.textContent =
+  JSON.parse(localStorage.getItem("Counter")) || "0";
+let allFavouritesData = JSON.parse(localStorage.getItem("Favourites")) || [];
 
 cardsFunc();
+
+function cardsFunc() {
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      hearts.forEach((heart) => {
+        if (card.id == heart.id && heart.style.opacity != "1") {
+          heart.style.opacity = "1";
+          let name = card.children[1].children[0].children[0].innerHTML;
+          let image = card.children[0].getAttribute("src");
+          allFavouritesData.push({ id: card.id, name: name, image: image });
+        } else if (card.id == heart.id && heart.style.opacity == "1") {
+          heart.style.opacity = "0.3";
+          allFavouritesData.forEach((fav, idx) => {
+            if (fav.id == heart.id) {
+              allFavouritesData.splice(idx, 1);
+            }
+          });
+        }
+      });
+      tabs[1].firstElementChild.innerHTML = allFavouritesData.length;
+      localStorage.setItem(
+        "Counter",
+        JSON.stringify(tabs[1].firstElementChild.textContent)
+      );
+      localStorage.setItem("Favourites", JSON.stringify(allFavouritesData));
+    });
+  });
+}
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -106,29 +153,12 @@ tabs.forEach((tab) => {
     } else {
       nftAdder(allFavouritesData, true);
     }
+
+    localStorage.setItem(
+      "Counter",
+      JSON.stringify(tabs[1].firstElementChild.textContent)
+    );
+    localStorage.setItem("Favourites", JSON.stringify(allFavouritesData));
     cardsFunc();
   });
 });
-
-function cardsFunc() {
-  cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      hearts.forEach((heart) => {
-        if (card.id == heart.id && heart.style.opacity != "1") {
-          heart.style.opacity = "1";
-          let name = card.children[1].children[0].children[0].innerHTML;
-          let image = card.children[0].getAttribute("src");
-          allFavouritesData.push({ id: card.id, name: name, image: image });
-        } else if (card.id == heart.id && heart.style.opacity == "1") {
-          heart.style.opacity = "0.3";
-          allFavouritesData.forEach((fav, idx) => {
-            if (fav.id == heart.id) {
-              allFavouritesData.splice(idx, 1);
-            }
-          });
-        }
-      });
-      tabs[1].firstElementChild.innerHTML = allFavouritesData.length;
-    });
-  });
-}
