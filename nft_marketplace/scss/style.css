@@ -3088,6 +3088,9 @@ body {
   flex-direction: column;
   gap: 30px;
 }
+#artistAccount .bottom .box .left .right2 {
+  display: none;
+}
 #artistAccount .bottom .box .left > h2 {
   font-size: 51px;
   font-style: normal;
@@ -3114,6 +3117,7 @@ body {
   font-weight: 700;
   line-height: 140%;
   color: white;
+  font-family: Space Mono;
 }
 #artistAccount .bottom .box .left .numbers .count > p {
   font-size: 22px;
@@ -3137,6 +3141,7 @@ body {
   color: white;
   color: #858584;
   font-family: Space Mono;
+  height: 35px;
 }
 #artistAccount .bottom .box .left .text > p:last-child {
   font-size: 22px;
@@ -3145,6 +3150,7 @@ body {
   font-weight: 400;
   line-height: 160%;
   color: white;
+  height: 35px;
 }
 #artistAccount .bottom .box .left .links {
   display: flex;
@@ -3160,6 +3166,7 @@ body {
   color: white;
   color: #858584;
   font-family: Space Mono;
+  height: 35px;
 }
 #artistAccount .bottom .box .left .links .socialMedia {
   display: flex;
@@ -3232,4 +3239,173 @@ body {
   transform: translateY(2px);
   box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
   scale: 0.99;
+}
+
+@media (max-width: 1280px) {
+  #artistAccount .top > img {
+    height: 280px;
+  }
+  #artistAccount .top .avatar {
+    top: 210px;
+    width: 690px;
+  }
+  #artistAccount .top .gradient {
+    height: 280px;
+  }
+  #artistAccount .bottom {
+    padding: 80px 0px 30px 0px;
+  }
+  #artistAccount .bottom .box {
+    gap: 0px;
+  }
+  #artistAccount .bottom .box .left {
+    width: 690px;
+  }
+  #artistAccount .bottom .box .left .right2 {
+    display: flex;
+    gap: 20px;
+  }
+  #artistAccount .bottom .box .left .right2 button:first-child {
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: 20px;
+    background: #a259ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: 140%;
+    color: white;
+    width: 186px;
+  }
+  #artistAccount .bottom .box .left .right2 button:first-child:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  #artistAccount .bottom .box .left .right2 button:first-child:active {
+    transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+    scale: 0.99;
+  }
+  #artistAccount .bottom .box .left .right2 button:last-child {
+    background-color: transparent;
+    display: inline-flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 12px;
+    border-radius: 20px;
+    border: 2px solid #a259ff;
+    color: #a259ff;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-style: normal;
+    font-family: Work Sans;
+    font-weight: 600;
+    line-height: 140%;
+    color: white;
+    width: 145px;
+  }
+  #artistAccount .bottom .box .left .right2 button:last-child:hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  }
+  #artistAccount .bottom .box .left .right2 button:last-child:active {
+    transform: translateY(2px);
+    box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+    scale: 0.99;
+  }
+  #artistAccount .bottom .box .left > h2 {
+    font-size: 38px;
+    line-height: 120%;
+  }
+  #artistAccount .bottom .box .left .numbers {
+    display: flex;
+    gap: 20px;
+    width: 510px;
+  }
+  #artistAccount .bottom .box .left .numbers .count {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  #artistAccount .bottom .box .left .numbers .count > h4 {
+    font-size: 22px;
+    line-height: 160%;
+  }
+  #artistAccount .bottom .box .left .numbers .count > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  #artistAccount .bottom .box .left .text > p:first-child {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    height: 22px;
+  }
+  #artistAccount .bottom .box .left .text > p:last-child {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    height: 22px;
+  }
+  #artistAccount .bottom .box .left .links > h5 {
+    height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  #artistAccount .bottom .box .left .links .socialMedia > img {
+    cursor: pointer;
+    height: 24px;
+  }
+  #artistAccount .bottom .box .right {
+    display: none;
+  }
+}
+@media (max-width: 834px) {
+  #artistAccount .top > img {
+    height: 250px;
+  }
+  #artistAccount .top .avatar {
+    top: 180px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  #artistAccount .top .gradient {
+    height: 250px;
+  }
+  #artistAccount .bottom .box .left {
+    width: 315px;
+  }
+  #artistAccount .bottom .box .left .right2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  #artistAccount .bottom .box .left .right2 button:first-child {
+    width: 315px;
+  }
+  #artistAccount .bottom .box .left .right2 button:last-child {
+    width: 315px;
+  }
+  #artistAccount .bottom .box .left > h2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 140%;
+  }
+  #artistAccount .bottom .box .left .numbers {
+    width: 315px;
+  }
 }
