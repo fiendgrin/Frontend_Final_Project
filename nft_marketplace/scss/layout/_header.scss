@@ -43,6 +43,7 @@
       }
       .signUp {
         @include buttonPurple(60px);
+        @include text(16,600,140%);
       }
     }
   }

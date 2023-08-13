@@ -28,6 +28,7 @@ body {
       }
       .GetStartedhero {
         @include buttonPurple(60px);
+        @include text(16px,600,140%);
         width: 224px;
         &:hover {
           scale: 1.05;
