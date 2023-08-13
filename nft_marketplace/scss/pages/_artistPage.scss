@@ -7,6 +7,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    gap: 0px;
     > img {
       height: 320px;
       object-fit: cover;
@@ -249,6 +250,312 @@
           }
           .numbers {
             width: 315px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#nsftsToFavorites {
+  @include flexCenter();
+  gap: 60px;
+  padding: 0px 0px 80px 0px;
+  flex-direction: column;
+  position: relative;
+  .line {
+    width: 100%;
+    position: absolute;
+    background-color: $background-secondary;
+    height: 1px;
+    top: 80px;
+  }
+  .top {
+    @include flexCenter();
+    background-color: $background;
+    width: 100%;
+    .box {
+      width: 1050px;
+      margin-top: 90px;
+      @include flexCenter();
+      .tab {
+        cursor: pointer;
+        width: 350px;
+        height: 60px;
+        padding: 0px 30px;
+        @include text(22px, 600, 140%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        color: $caption-Label-Text;
+        .count {
+          display: flex;
+          padding: 5px 10px;
+          align-items: center;
+          border-radius: 20px;
+          background: #3b3b3b;
+          @include text(16px, 400, 140%);
+          font-family: Space Mono;
+        }
+      }
+      .active {
+        border-bottom: 2px solid $caption-Label-Text;
+        color: #ffffff;
+      }
+    }
+  }
+  background-color: $background-secondary;
+  border-bottom: 2px solid $background;
+  .nfts {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1050px;
+    gap: 30px;
+    .nft {
+      border-radius: $border-radius-default;
+      transition: 0.5s;
+      position: relative;
+      height: fit-content;
+      &:hover {
+        scale: 1.08;
+        animation: tilt 5.2s ease-in infinite;
+        animation-direction: alternate;
+      }
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      > img:nth-child(1) {
+        width: 330px;
+        height: 296px;
+        border-top-left-radius: $border-radius-default;
+        border-top-right-radius: $border-radius-default;
+      }
+      > img:nth-child(3) {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        transition: 0.3s;
+        opacity: 0.3;
+      }
+      > img:nth-child(4) {
+        width: 34px;
+        height: 34px;
+        position: absolute;
+        right: 9px;
+        top: 9px;
+        opacity: 0.9;
+      }
+      > .bottom {
+        border-bottom-left-radius: $border-radius-default;
+        border-bottom-right-radius: $border-radius-default;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        padding: 20px 30px 25px 30px;
+        background-color: $background;
+        .info {
+          display: flex;
+          flex-direction: column;
+          row-gap: 5px;
+          > h5 {
+            @include text(22px, 600, 140%);
+            height: 31px;
+          }
+          .account {
+            display: flex;
+            column-gap: 12px;
+            > img {
+              width: 24px;
+              height: 24px;
+              border-radius: 50%;
+            }
+            > p {
+              @include text(16px, 400, 140%);
+              font-family: "Space Mono";
+              align-self: flex-start;
+            }
+          }
+        }
+        .money {
+          display: flex;
+          column-gap: 21px;
+
+          .left {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            > p {
+              &:first-child {
+                color: #858584;
+                font-family: "Space Mono";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: start;
+                width: 114px;
+                height: 13px;
+              }
+              &:last-child {
+                @include text(16px, 400, 140%);
+                font-family: "Space Mono";
+                text-align: start;
+                width: 114px;
+                height: 22px;
+              }
+            }
+          }
+          .right {
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            > p {
+              &:first-child {
+                color: #858584;
+                font-family: "Space Mono";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: end;
+                width: 135px;
+                height: 13px;
+              }
+              &:last-child {
+                @include text(16px, 400, 140%);
+                font-family: "Space Mono";
+                text-align: end;
+                width: 135px;
+                height: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include for-type(tablet) {
+  #nsftsToFavorites {
+    gap: 40px;
+    .top {
+      .box {
+        width: 680px;
+        .tab {
+          width: 226.67px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          .count {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 110%;
+          }
+        }
+      }
+    }
+    .nfts {
+      width: 690px;
+      gap: 30px;
+      .nft {
+        > img:first-child {
+          height: 295px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  #nsftsToFavorites {
+    .top {
+      .box {
+        width: 315px;
+        .tab {
+          width: 105px;
+          padding: 0px 10px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          .count {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .nfts {
+      width: 315px;
+      gap: 20px;
+      flex-direction: column;
+      .nft {
+        &:last-child {
+          display: flex;
+        }
+        &:hover {
+          scale: 1.05;
+        }
+        > img:first-child {
+          width: 315px;
+          height: 238px;
+        }
+        > .bottom {
+          padding: 20px 20px 25px 20px;
+          gap: 25px;
+          .info {
+            > h5 {
+              @include text(22px, 600, 140%);
+            }
+            .account {
+              display: flex;
+              column-gap: 12px;
+              > img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+              }
+            }
+          }
+          .money {
+            display: flex;
+            column-gap: 21px;
+
+            .left {
+              > p {
+                &:first-child {
+                  width: 116.5px;
+                }
+                &:last-child {
+                  width: 116.5px;
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 110%;
+                  height: 13px;
+                }
+              }
+            }
+            .right {
+              row-gap: 8px;
+              > p {
+                &:first-child {
+                  width: 137.5px;
+                }
+                &:last-child {
+                  width: 137.5px;
+                  font-size: 12px;
+                  font-weight: 400;
+                  line-height: 110%;
+                  height: 13px;
+                }
+              }
+            }
           }
         }
       }
