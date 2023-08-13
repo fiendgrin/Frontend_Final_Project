@@ -39,7 +39,7 @@ function nftMaker(id, name, image, favorite) {
       <h5>${name}</h5>
         <div class="account">
         <img src="./images/AvatarPlaceholder.png" alt="" />
-          <p>MoonDancer</p>
+          <p>Animakid</p>
           </div>
           </div>
           <div class="money">
@@ -62,7 +62,7 @@ function nftMaker(id, name, image, favorite) {
     <h5>${name}</h5>
     <div class="account">
     <img src="./images/AvatarPlaceholder.png" alt="" />
-    <p>MoonDancer</p>
+    <p>Animakid</p>
     </div>
     </div>
     <div class="money">
@@ -143,8 +143,6 @@ tabs.forEach((tab) => {
       hearts = document.querySelectorAll(".nfts .nft .heart");
       allFavouritesData.forEach((fav) => {
         hearts.forEach((heart) => {
-          console.log(fav);
-          console.log(heart);
           if (fav.id == heart.id) {
             heart.style.opacity = "1";
           }

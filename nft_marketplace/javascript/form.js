@@ -1,13 +1,10 @@
 const form = document.querySelector("#imagePlaceholder form");
-console.log(form);
 const notValidText = document.querySelectorAll(
   "#imagePlaceholder form .box >p"
 );
 const regexPass =
   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 
-console.log(regexEmail);
-console.log(notValidText);
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   notValidText.forEach((text) => {
