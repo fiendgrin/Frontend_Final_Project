@@ -1,4 +1,4 @@
-#ImagePlaceholder {
+#imagePlaceholder {
   display: flex;
   gap: 60px;
   width: 100%;
@@ -57,6 +57,79 @@
         @include buttonPurple(46px);
         width: 330px;
         @include text(16px, 600, 140%);
+      }
+    }
+  }
+}
+
+@include for-type(tablet) {
+  #imagePlaceholder {
+    gap: 40px;
+    > img {
+      height: 615px;
+      width: calc(50% - 20px);
+    }
+    .right {
+      padding: 80px 0px;
+      width: calc(50% - 20px);
+      .text {
+        width: 325px;
+        > h2 {
+          font-size: 38px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+      > form {
+        width: 325px;
+
+        > .box {
+          > input {
+            width: 325px;
+          }
+        }
+        > button {
+          width: 325px;
+        }
+      }
+    }
+  }
+}
+
+@include for-type(mobile) {
+  #imagePlaceholder {
+    padding: 0;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    > img {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+      align-items: center;
+      padding: 30px 0px 40px 0px;
+      gap: 30px;
+      .text {
+        width: 315px;
+      }
+      > form {
+        width: 315px;
+
+        > .box {
+          > input {
+            width: 315px;
+          }
+        }
+        > button {
+          width: 315px;
+        }
       }
     }
   }
